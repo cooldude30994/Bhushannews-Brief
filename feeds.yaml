@@ -1,0 +1,78 @@
+# =============================================================================
+# feeds.yaml — your topics, in plain English, turned into search feeds
+# =============================================================================
+# HOW TO EDIT THIS FILE (no coding needed):
+#   - Each "bucket" is one topic area. It becomes one section in your Telegram brief.
+#   - Under "queries", each line is one Google News search phrase.
+#     Use quotes "like this" for an exact phrase. Use OR to combine terms.
+#   - Under "rss", you can paste any website's RSS feed URL directly (optional).
+#   - "priority: 1" buckets are always shown in full.
+#     "priority: 2" buckets get trimmed to the top 5 items if things get busy.
+#   - To add a new topic, copy an existing bucket block and edit it.
+#   - To stop tracking a topic, delete its block (or put a # in front of every line).
+# =============================================================================
+
+lookback_hours_fallback: 14   # only used on the very first run, before a watermark exists
+
+noise_terms:                  # items containing these words (case-insensitive) are dropped
+  - "horoscope"
+  - "share price target"
+  - "buy or sell"
+  - "stock recommendation"
+  - "ipl "
+  - "bollywood"
+
+buckets:
+
+  - name: "Tata Group"
+    priority: 1
+    queries:
+      - '"Tata Sons" OR "Tata Group" tax'
+      - '"Tata Motors" OR "Tata Steel" OR "Tata Consultancy" tax OR GST OR "income tax"'
+      - '"Tata Sons" OR "Tata Group" regulatory OR compliance OR litigation'
+
+  - name: "Pillar Two / GloBE"
+    priority: 1
+    queries:
+      - '"Pillar Two" OR "GloBE" OR "global minimum tax"'
+      - '"QDMTT" OR "Income Inclusion Rule" OR "Undertaxed Profits Rule"'
+      - '"GloBE Information Return" OR "top-up tax"'
+    rss:
+      - https://www.oecd.org/tax/beps/beps-actions/action-1/rss.xml
+
+  - name: "CbCR, Master File & Transfer Pricing"
+    priority: 1
+    queries:
+      - '"country-by-country reporting" OR "CbCR" tax'
+      - '"Public CbCR" OR "public country-by-country"'
+      - '"Master File" transfer pricing'
+      - '"transfer pricing" India OR OECD'
+
+  - name: "Indian Income Tax"
+    priority: 2
+    queries:
+      - 'CBDT circular OR notification OR clarification'
+      - '"Income Tax Act" amendment OR ruling'
+      - '"income tax refund" OR "Section 244A"'
+      - 'ITAT OR "Income Tax Appellate Tribunal" ruling'
+
+  - name: "GST & Indirect Tax"
+    priority: 2
+    queries:
+      - '"GST Council" meeting OR decision OR notification'
+      - '"DRC-07" OR "GST demand" OR "GST show cause"'
+      - 'GST "High Court" OR "Supreme Court" ruling'
+      - 'CBIC circular OR notification'
+
+  - name: "International Tax & Compliance (90+ jurisdictions)"
+    priority: 2
+    queries:
+      - '"BEPS" OR "OECD tax" update'
+      - '"withholding tax" treaty OR DTAA India'
+      - '"tax residency" OR "permanent establishment" ruling'
+
+# -----------------------------------------------------------------------------
+# TIP: keep each query specific. A query like "tax" alone will flood you with
+# noise. Two or three well-chosen phrases per bucket work far better than one
+# broad one.
+# -----------------------------------------------------------------------------
