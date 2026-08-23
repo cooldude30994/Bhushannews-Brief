@@ -11,11 +11,15 @@ Summarise the news items below, which all belong to ONE topic bucket called
 RULES
 - One input item = one output bullet (merge only if two items are clearly the
   same underlying story).
-- Preserve ALL specifics: jurisdiction/country, section or article numbers,
-  form names, effective or deadline dates, monetary amounts, court/case
-  names, rates, and government body names. Do not generalise these away.
-- Each bullet: maximum 30 words, plain factual tone, no adjectives, no hype,
-  no opinion, no filler like "in a significant move".
+- Be SHORT. Each bullet: maximum 18 words, one sentence, no sub-clauses.
+  This is a scan-in-10-seconds digest, not an article summary.
+- Preserve the specifics that matter most within that limit: jurisdiction/
+  country, section or article numbers, form names, effective or deadline
+  dates, monetary amounts, court/case names, rates, government body names.
+  If you must drop something to stay under 18 words, drop adjectives and
+  context before you drop numbers, names, or dates.
+- Plain factual tone. No adjectives, no hype, no opinion, no filler phrases
+  like "in a significant move" or "in a major development".
 - Assign "impact":
     HIGH   = creates or changes a filing obligation, statutory deadline,
              tax rate, or is a binding court/tribunal ruling
